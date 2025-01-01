@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "aatracker",
+  "version": "${version}",
+  "name": "aatracker",
+  "description": "GUI to track all advancements",
+  "author": "Mack Navickas",
+  "license": "MIT",
+  "icon": "assets/aatracker/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.navickasm.aatracker.client.Client"
+    ]
+  },
+  "mixins": [
+    "aatracker.mixins.json",
+    {
+      "config": "aatracker.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
